@@ -5,20 +5,20 @@
 class Abom < Formula
   desc "Actions Bill of Materials — map your GitHub Actions supply chain"
   homepage "https://github.com/JulietSecurity/abom"
-  version "0.1.0"
+  version "0.1.2"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/JulietSecurity/abom/releases/download/v0.1.0/abom_darwin_amd64.tar.gz"
-      sha256 "e790cfdd85574e9808afdbcc26d0dce1bf9a59a570ca068231829e3032d3aad8"
+      url "https://github.com/JulietSecurity/abom/releases/download/v0.1.2/abom_darwin_amd64.tar.gz"
+      sha256 "3e3bee4205deb4d6c274377aa69c6cb183f0db42e42683348b49e9004ecf6538"
 
       define_method(:install) do
         bin.install "abom"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/JulietSecurity/abom/releases/download/v0.1.0/abom_darwin_arm64.tar.gz"
-      sha256 "521f531b7f61053305a5841f2fd1a77cb483e67abf136a64ed46708bfb9a39f2"
+      url "https://github.com/JulietSecurity/abom/releases/download/v0.1.2/abom_darwin_arm64.tar.gz"
+      sha256 "ed5fe56307ae8120cc1bd3ed578492ffc4b84e5abcc7c0f51241cb29f0c93cf0"
 
       define_method(:install) do
         bin.install "abom"
@@ -28,15 +28,15 @@ class Abom < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/JulietSecurity/abom/releases/download/v0.1.0/abom_linux_amd64.tar.gz"
-      sha256 "ad36dca695e3fa701cd42c70fc0f2246f45a1b65b904774406ee4e2dca079df6"
+      url "https://github.com/JulietSecurity/abom/releases/download/v0.1.2/abom_linux_amd64.tar.gz"
+      sha256 "7274e84a3046eabc51643f9c4a6d5f9070495c396276f41838d2a49b6b6616d5"
       define_method(:install) do
         bin.install "abom"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/JulietSecurity/abom/releases/download/v0.1.0/abom_linux_arm64.tar.gz"
-      sha256 "4e79cb741462fae40806eeccb873ffe07b2893dc0835f08e1cbee2e04c889777"
+      url "https://github.com/JulietSecurity/abom/releases/download/v0.1.2/abom_linux_arm64.tar.gz"
+      sha256 "c385454a02900efa72243a2ae6275181891133d318d485e3e5838fa2a233c8f9"
       define_method(:install) do
         bin.install "abom"
       end
