@@ -10,7 +10,7 @@ class Abom < Formula
   on_macos do
     if Hardware::CPU.intel?
       url "https://github.com/JulietSecurity/abom/releases/download/v0.1.3/abom_darwin_amd64.tar.gz"
-      sha256 "7bef7c0439efa1c7fc223c0f8c18ad8dcbb1d1e3257b9240f117916cfbef88c3"
+      sha256 "03222817e017dba5a514420b30a5e50599a74530af232fac617fb5f8adb56691"
 
       define_method(:install) do
         bin.install "abom"
@@ -18,7 +18,7 @@ class Abom < Formula
     end
     if Hardware::CPU.arm?
       url "https://github.com/JulietSecurity/abom/releases/download/v0.1.3/abom_darwin_arm64.tar.gz"
-      sha256 "e18c0cec3dd282a862657e429c658fa6369f5d2e8f9260339ee03b9ad5d938f3"
+      sha256 "9a91a02e3028bc98705df8473b93b5f7329e8f8716ea46e573ab080680dd168c"
 
       define_method(:install) do
         bin.install "abom"
@@ -29,14 +29,14 @@ class Abom < Formula
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
       url "https://github.com/JulietSecurity/abom/releases/download/v0.1.3/abom_linux_amd64.tar.gz"
-      sha256 "98dbe4fb34b8e3a8057cef79bdc5448440f31addcd374673155a2a565044d033"
+      sha256 "4506cd6a95f9571a30d31c20bc5459d24a85e18db65abd93e208cccea6f9bc48"
       define_method(:install) do
         bin.install "abom"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
       url "https://github.com/JulietSecurity/abom/releases/download/v0.1.3/abom_linux_arm64.tar.gz"
-      sha256 "9be939b2f0eda3ae4bedd055a901546e96cc98cd1230bf16e4c809fcd1020a3f"
+      sha256 "9a9779b288aa32e2bd11c4eb3023ac9371b2f9b632fc4a9b1a22b96fbf9a2f81"
       define_method(:install) do
         bin.install "abom"
       end
